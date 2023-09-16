@@ -1,0 +1,24 @@
+.sign {
+  background-image: linear-gradient(
+    to right,
+    #00d2ff 0%,
+    #928dab 51%,
+    #00d2ff 100%
+  );
+
+  padding: 8px 30px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  font-size: 14px;
+  border-radius: 10px;
+  display: block;
+}
+
+.sign:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
