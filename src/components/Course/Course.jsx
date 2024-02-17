@@ -1,4 +1,6 @@
-import React from "react";
+/* eslint-disable react/prop-types */
+/* eslint-disable react/no-unknown-property */
+
 import { FaBookOpen, FaDollarSign } from "react-icons/fa";
 import "./Course.css";
 

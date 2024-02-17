@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import Course from "../Course/Course";
 import Cart from "../Cart/Cart";
 import Swal from "sweetalert2/dist/sweetalert2.js";
@@ -16,7 +16,18 @@ const Courses = () => {
       .then((res) => res.json())
       .then((data) => setCourses(data));
   }, []);
+// Handle rmeove from cart
+const handleRemoveFromCart = course => {
+  const remainingCourses = selectedCourses.filter(c=> c.id !== course.id)
+  setSelectedCourses(remainingCourses)
+  const reduceCredit = totalCreadit - course.duration;
+  setTotalCreadit(parseFloat(reduceCredit))
+  const reduceRemainingCredit = remainingHour + course.duration;
+  setRemainingHour(parseFloat(reduceRemainingCredit))
+  setTotalPrice(totalPrice - course.price)
+}
 
+console.log(selectedCourses)
   // Handle Selected Course
   const handleSelected = (course) => {
     // Declaear Initial Value Of Price
@@ -70,6 +81,7 @@ const Courses = () => {
         <div className="lg:w-[320px] xl:w-[400px} ">
           {/* Import Cart Component and Pass Require State and Function */}
           <Cart
+          handleRemoveFromCart={handleRemoveFromCart}
             totalPrice={totalPrice}
             remainingHour={remainingHour}
             totalCreadit={totalCreadit}
