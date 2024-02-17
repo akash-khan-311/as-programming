@@ -27,7 +27,7 @@ const handleRemoveFromCart = course => {
   setTotalPrice(totalPrice - course.price)
 }
 
-console.log(selectedCourses)
+
   // Handle Selected Course
   const handleSelected = (course) => {
     // Declaear Initial Value Of Price
