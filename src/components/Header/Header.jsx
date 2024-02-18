@@ -1,4 +1,4 @@
-import React from "react";
+
 
 import logo from "../../assets/logo.png";
 import "./Header.css";
@@ -55,11 +55,11 @@ const Header = () => {
                 className="h-6 w-6"
                 fill="none"
                 stroke="currentColor"
-                strokewidth={2}
+                strokeWidth={2}
               >
                 <path
-                  strokelinecap="round"
-                  strokelinejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   d="M4 6h16M4 12h16M4 18h16"
                 />
               </svg>
